@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>LiveClass</title>
+	<meta charset="UTF-8">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=none">
+    <link href="css/styles.css" rel="stylesheet">
+	<link href="images/programming.png" rel="icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ace.js"></script>
+	<script type="text/javascript" src="js/firebase.js"></script>
+  </head>
+  <body onload='ready()'>
+	<div class='info' id='info'>Student mode</div>
+	<i class='fa fa-sign-in btn-sign' id='btn_sign'></i>
+	
+	<div class='load-container' id='pan_load'>
+	  <div class='load'></div>
+	</div>
+	
+	
+	<div class='load-container' id='pan_auth'>
+	  
+	  <form id='myform'>
+		<i class='fa fa-close close' onclick='closeAuth()'></i>
+		<h>Fill out this form</h>
+		<label for='mail'>Email</label>
+		  <input class='inp' type='email' id='mail' placeholder='Email...' required>
+		<label for='pass'>Password</label>
+		  <input class='inp' type='password' id='pass' placeholder='Password...' required>
+		<input class='btn-submit' type='submit' value='SIGN IN'>
+	  </form>
+	  
+	</div>
+	<div id='inner'></div>
+	
+	<div id='container'>
+	  <iframe id='iframe' frameborder="0">
+		
+	  </iframe>
+	  <div class='editor' id='editor'>
+
+	  </div>
+	  <pre class='editor' id='my_editor' contenteditable='true' autocapitalize='none'>
+		
+	  </pre>
+	</div>
+	
+	<!--<pre id="output">output....</pre>
+	<textarea type="text" class="input-board" placeholder="Type your code..." id="input_board"></textarea>-->
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>		
